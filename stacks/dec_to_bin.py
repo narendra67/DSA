@@ -9,8 +9,6 @@ def dec_to_bin(dec_num):
         print(dec_num, dec_num % 2)
         s.push(dec_num % 2)
         dec_num //= 2
-    # else:
-        # s.push(1)
 
     while s.size():
         bin_num += str(s.pop())
