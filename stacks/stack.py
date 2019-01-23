@@ -30,7 +30,7 @@ class Stack():
     def peek(self):
         """Return top most element on the stack."""
         stack_length = len(self.stack)
-        if (stack_length) == 0:
+        if stack_length == 0:
             return "Stack is empty."
 
         return self.stack[len(self.stack)-1]
