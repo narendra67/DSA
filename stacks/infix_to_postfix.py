@@ -38,7 +38,6 @@ def infix_to_postfix(infix_exp):
             s.pop()
 
     while not s.is_empty():
-        print('final check')
         post_array.append(s.pop())
 
     return "".join(post_array)
