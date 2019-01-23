@@ -28,19 +28,17 @@ def infix_to_postfix(infix_exp):
         elif element == '(':
             s.push(element)
         elif element in '*/+-':
-            if s.is_empty():
-                s.push(element)
-            elif precedence[element] <= precedence[s.peek()]:
-                post_array.append(s.pop())
-                s.push(element)
-            else:
-                s.push(element)
+            if (not s.is_empty()) and \
+                  (precedence[element] <= precedence[s.peek()]):
+                    post_array.append(s.pop())
+            s.push(element)
         elif element == ')':
             while s.peek() != '(':
                 post_array.append(s.pop())
             s.pop()
 
     while not s.is_empty():
+        print('final check')
         post_array.append(s.pop())
 
     return "".join(post_array)
