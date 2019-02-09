@@ -18,11 +18,16 @@ def hot_potato(peopleList = [], num = 1):
     while tempQueue.size() > 1:
         if num < 1:
             return 'Number (num) of iterations should be >= 1.'
-        i = 1
-        while i < num:
+        # i = 1
+        # while i <= num:
+        #     tempQueue.enqueue(tempQueue.dequeue())
+        #     i += 1
+        # else:
+        #     tempQueue.dequeue()
+        for i in range(num):
             tempQueue.enqueue(tempQueue.dequeue())
-            i += 1
-        else:
-            tempQueue.dequeue()
-    else:
-        return tempQueue.dequeue() + ' is the winner.'
+
+        tempQueue.dequeue()
+
+    winner = tempQueue.dequeue()
+    return (str(winner) if type(winner) == int else winner) + ' is the winner.'
