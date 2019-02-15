@@ -1,5 +1,6 @@
 """A Queue class."""
 
+
 class Queue():
     """A Queue implementation using list."""
 
