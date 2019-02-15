@@ -1,7 +1,7 @@
 from queue import Queue
 
 
-def hot_potato(peopleList = [], num = 1):
+def hot_potato(peopleList=[], num=1):
     """A game where a potato will be passed around n number of
         people, until num - number at which the moving of potato
         should be stopped and the person holding the potato will
