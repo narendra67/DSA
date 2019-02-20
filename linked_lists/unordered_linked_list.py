@@ -1,21 +1,5 @@
-class Node():
-    """A linked list node."""
-
-    def __init__(self, init_data):
-        self.data = init_data
-        self.next = None  # Grounding the node
-
-    def get_data(self):
-        return self.data
-
-    def get_next(self):
-        return self.next
-
-    def set_next(self, next_node):
-        self.next = next_node
-
-    def set_data(self, new_data):
-        self.data = new_data
+"""A unordered Linked List."""
+from node import Node
 
 
 class Unordered_List():
