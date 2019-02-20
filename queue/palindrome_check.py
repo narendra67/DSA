@@ -16,9 +16,12 @@ def palindrome_checker(a_string):
 
 
 # implementation from interactive python
-def palindrome_checker_ip(str):
+def palindrome_checker_ip(a_string):
     """FROM: Interactive Python - Check for palindrome or not using deque."""
     chardeque = Deque()
+
+    for index, value in enumerate(a_string):
+        chardeque.addFront(value)
 
     still_equal = True
 
