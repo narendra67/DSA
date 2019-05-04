@@ -11,8 +11,6 @@ class HashTable {
     let hash = 0
     const length = this.data.length
     if (typeof (key) === "number") {
-      console.log(typeof (key))
-
       hash = key % length
     } else {
       for (let i = 0; i < key.length; i++) {
@@ -58,13 +56,15 @@ class HashTable {
     }
   }
 
+  keys() {
+    let keysArray = []
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        for (let j = 0; j < this.data[i].length; j++) {
+          keysArray.push(this.data[i][j][0])
+        }
+      }
+    }
+    return keysArray
+  }
 }
-
-let HT = new HashTable(50)
-HT.set("apple", 11111)
-HT.set("banana", 1)
-HT.set("banana", 2)
-HT.set(1,1)
-HT.set(51, 2)
-console.log(HT.data)
-console.log(HT.get(51))
